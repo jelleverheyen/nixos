@@ -24,6 +24,9 @@
     # Temporary IDE tooling
     pkgs.lua-language-server
 
+    # Gaming
+    pkgs.protonup
+
     # # It is sometimes useful to fine-tune packages, for example, by applying
     # # overrides. You can do that directly here, just don't forget the
     # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
@@ -71,6 +74,12 @@
   #
   home.sessionVariables = {
     EDITOR = "nvim";
+  };
+
+  # Add installation path for ProtonGE
+  home.sessionVariables = {
+    STEAM_EXTRA_COMPAT_TOOLS_PATHS =
+      "\\\${HOME}/.steam/root/compatibilitytools.d";
   };
 
   # Let Home Manager install and manage itself.

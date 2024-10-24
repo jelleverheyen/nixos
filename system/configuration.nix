@@ -9,6 +9,7 @@
   imports =
     [ 
       ./hardware-configuration.nix
+      ./modules/gaming.nix
     ];
 
   # Bootloader.
