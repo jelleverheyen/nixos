@@ -2,15 +2,17 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ pkgs, ... }:
 
 {
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
-  imports =
-    [ 
-      ./hardware-configuration.nix
-      ./modules/gaming.nix
-    ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
+  imports = [
+    ./hardware-configuration.nix
+    ./modules/gaming.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -78,7 +80,10 @@
   users.users.jelle = {
     isNormalUser = true;
     description = "Jelle Verheyen";
-    extraGroups = [ "networkmanager" "wheel" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
   };
 
   # Enable automatic login for the user.

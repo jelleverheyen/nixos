@@ -1,5 +1,5 @@
 { pkgs, ... }:
- 
+
 {
   hardware.graphics.enable = true;
 
@@ -16,5 +16,5 @@
     winetricks
   ];
 
-  services.xserver.videoDrivers = ["amdgpu"];
+  services.xserver.videoDrivers = [ "amdgpu" ];
 }
