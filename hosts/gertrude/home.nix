@@ -1,8 +1,12 @@
-{ pkgs, ... }:
-
+{
+  inputs,
+  outputs,
+  pkgs,
+  ...
+}:
 {
   imports = [
-    ./modules/dev.nix
+    ../../modules/home/default.nix
   ];
 
   home.stateVersion = "24.05";
@@ -24,9 +28,9 @@
     stremio
     vlc
     xclip
-
-    # Gaming
-    protonup
+    tmux
+    prismlauncher
+    vesktop
   ];
 
   home.file = {
@@ -35,11 +39,6 @@
 
   home.sessionVariables = {
     EDITOR = "nvim";
-  };
-
-  # Add installation path for ProtonGE
-  home.sessionVariables = {
-    STEAM_EXTRA_COMPAT_TOOLS_PATHS = "\\\${HOME}/.steam/root/compatibilitytools.d";
   };
 
   # Let Home Manager install and manage itself.
