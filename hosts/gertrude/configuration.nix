@@ -56,6 +56,7 @@
   environment.systemPackages = with pkgs; [
     wget
     curl
+    direnv
   ];
 
   users.users.jelle = {

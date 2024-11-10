@@ -17,20 +17,21 @@
   home.packages = with pkgs; [
     git
     fzf
+    bat
     ripgrep
     jq
     qsv
     neovim
     nerdfonts
-    alacritty
     ddcutil
     spotify
     stremio
     vlc
     xclip
-    tmux
     prismlauncher
     vesktop
+    gnupg
+    pinentry
   ];
 
   home.file = {
