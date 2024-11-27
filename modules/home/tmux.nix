@@ -17,7 +17,14 @@
     ];
 
     extraConfig = ''
+      set -g prefix C-s
+      set -g mouse on
 
+      setw -g mode-keys vi
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+      bind-key l select-pane -R
     '';
   };
 }

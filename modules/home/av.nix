@@ -5,6 +5,7 @@
     ffmpeg
     shotcut
     vlc
+    mpv
     qbittorrent
   ];
 }

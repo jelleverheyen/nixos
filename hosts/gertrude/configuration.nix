@@ -61,7 +61,6 @@
 
   users.users.jelle = {
     isNormalUser = true;
-    shell = pkgs.fish;
     description = "Jelle Verheyen";
     extraGroups = [
       "networkmanager"

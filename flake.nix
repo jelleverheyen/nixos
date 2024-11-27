@@ -10,6 +10,8 @@
     };
 
     nix-minecraft.url = "github:Infinidoge/nix-minecraft";
+
+    catppuccin.url = "github:catppuccin/nix";
   };
 
   outputs =
@@ -17,10 +19,12 @@
     {
       nixosConfigurations = {
         gertrude = inputs.nixpkgs.lib.nixosSystem {
+          system = "x86_64-linux";
+
           specialArgs = {
             inherit inputs;
           };
-          system = "x86_64-linux";
+
           modules = [
             ./hosts/gertrude/configuration.nix
             ./modules/system
@@ -28,17 +32,16 @@
             {
               home-manager.useGlobalPkgs = true;
               home-manager.useUserPackages = true;
-              home-manager.users.jelle = import ./hosts/gertrude/home.nix;
+
+              home-manager.users.jelle = {
+                imports = [
+                  ./hosts/gertrude/home.nix
+                  inputs.catppuccin.homeManagerModules.catppuccin
+                ];
+              };
             }
           ];
         };
       };
-      #      nixosConfigurations = {
-      #        gertrude = mkSystem ./hosts/gertrude/configuration.nix;
-      #      };
-      #
-      #      homeConfigurations = {
-      #        "jelle@gertrude" = mkHome "x86_64-linux" ./hosts/gertrude/home.nix;
-      #      };
     };
 }

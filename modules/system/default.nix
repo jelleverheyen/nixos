@@ -2,7 +2,9 @@
 {
   imports = [
     ./gaming.nix
-    ./fish.nix
     ./minecraft.nix
+    ./fish.nix
   ];
+
+  hardware.opentabletdriver.enable = true;
 }

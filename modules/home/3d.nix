@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   home.packages = with pkgs; [
-    libreoffice
-    calibre
+    freecad
+    blender
   ];
 }
