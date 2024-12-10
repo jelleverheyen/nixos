@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 {
   imports = [
 
@@ -11,5 +11,9 @@
 
     ./terminal.nix
     ./tmux.nix
+  ];
+
+  home.packages = with pkgs; [
+    killall
   ];
 }

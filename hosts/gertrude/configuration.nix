@@ -59,6 +59,8 @@
     direnv
   ];
 
+  users.groups.i2c = { };
+
   users.users.jelle = {
     isNormalUser = true;
     description = "Jelle Verheyen";
@@ -66,8 +68,13 @@
       "networkmanager"
       "wheel"
       "minecraft"
+      "i2c"
     ];
   };
+
+  services.udev.extraRules = ''
+    KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
+  '';
 
   # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
   systemd.services."getty@tty1".enable = false;
