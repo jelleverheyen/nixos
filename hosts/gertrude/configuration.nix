@@ -64,7 +64,7 @@
 
   users.users.jelle = {
     isNormalUser = true;
-    description = "Jelle Verheyen";
+    description = "Jelle Verheye";
     extraGroups = [
       "networkmanager"
       "wheel"
