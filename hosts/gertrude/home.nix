@@ -14,13 +14,13 @@
 
   home.packages = with pkgs; [
     git
+    gitui
     fzf
     bat
     ripgrep
     jq
     qsv
     neovim
-    nerdfonts
     ddcutil
     spotify
     stremio
@@ -39,6 +39,10 @@
   home.sessionVariables = {
     EDITOR = "nvim";
   };
+
+  home.sessionPath = [
+    "${builtins.toString ../../scripts}"
+  ];
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

@@ -57,6 +57,7 @@
     wget
     curl
     direnv
+    nerd-fonts.iosevka-term
   ];
 
   users.groups.i2c = { };
