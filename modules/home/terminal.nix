@@ -1,5 +1,11 @@
 { pkgs, ... }:
 {
+  programs.zoxide = {
+    enable = true;
+    enableFishIntegration = true;
+  };
+
+  programs.kitty.enable = true;
   programs.alacritty = {
     enable = true;
     catppuccin.enable = true;

@@ -30,6 +30,22 @@
   time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_US.UTF-8";
 
+  services.hypridle.enable = true;
+  programs = {
+    hyprland = {
+      enable = true;
+      xwayland.enable = true;
+      systemd.setPath.enable = true;
+
+      # See: https://wiki.hyprland.org/Useful-Utilities/Systemd-start/#uwsm
+      withUWSM = true;
+    };
+
+    # GPU-accelerated screen locking
+    hyprlock.enable = true;
+    # Auto suspend etc
+  };
+
   services.xserver = {
     enable = true;
     desktopManager.gnome.enable = true;

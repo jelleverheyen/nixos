@@ -12,26 +12,6 @@
   home.username = "jelle";
   home.homeDirectory = "/home/jelle";
 
-  home.packages = with pkgs; [
-    git
-    gitui
-    fzf
-    bat
-    ripgrep
-    jq
-    qsv
-    neovim
-    ddcutil
-    spotify
-    stremio
-    vlc
-    xclip
-    prismlauncher
-    vesktop
-    gnupg
-    pinentry
-  ];
-
   home.file = {
     # For managing dotfiles
   };
