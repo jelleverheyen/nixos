@@ -9,7 +9,6 @@
     nixd # LSP
     nixfmt-rfc-style # Formatter
 
-    jetbrains.datagrip
     brave
   ];
 }
