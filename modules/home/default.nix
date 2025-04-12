@@ -1,7 +1,7 @@
 { pkgs, ... }:
 {
   imports = [
-
+    ./lang.nix
     ./gaming.nix
     ./dev.nix
     ./creative.nix

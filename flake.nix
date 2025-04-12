@@ -36,7 +36,7 @@
               home-manager.users.jelle = {
                 imports = [
                   ./hosts/gertrude/home.nix
-                  inputs.catppuccin.homeManagerModules.catppuccin
+                  inputs.catppuccin.homeModules.catppuccin
                 ];
               };
             }

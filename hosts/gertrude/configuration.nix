@@ -46,13 +46,15 @@
     # Auto suspend etc
   };
 
+  services.displayManager.autoLogin = {
+    enable = true;
+    user = "jelle";
+  };
+
   services.xserver = {
     enable = true;
     desktopManager.gnome.enable = true;
-
     displayManager.gdm.enable = true;
-    displayManager.autoLogin.enable = true;
-    displayManager.autoLogin.user = "jelle";
 
     xkb.layout = "us";
     xkb.variant = "";
@@ -60,7 +62,6 @@
 
   services.printing.enable = true;
 
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;

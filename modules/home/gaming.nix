@@ -12,8 +12,13 @@
     wineWowPackages.stable
     winetricks
 
-    #    runescape
+    # runescape
     runelite
+
+    # OOT
+    shipwright
+    _2ship2harkinian
+
   ];
 
   home.sessionVariables = {
