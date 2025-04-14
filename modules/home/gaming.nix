@@ -13,7 +13,7 @@
     winetricks
 
     # runescape
-    runelite
+    bolt-launcher
 
     # OOT
     shipwright
