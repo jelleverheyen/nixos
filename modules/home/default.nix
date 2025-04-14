@@ -19,7 +19,6 @@
     pandoc
     glow
     git
-    gitui
     fzf
     bat
     ripgrep
