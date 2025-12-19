@@ -9,6 +9,17 @@
     ./hardware-configuration.nix
   ];
 
+  nixpkgs.overlays = [
+    # Patch Scarlett Solo 4
+    (import ../../overlays/alsa-ucm-conf.nix)
+
+    # Force Python 3.12 because Python 3.13 is feral
+    (final: prev: {
+      python3 = prev.python312;
+      python3Packages = prev.python312Packages;
+    })
+  ];
+
   boot = {
     loader = {
       systemd-boot.enable = true;
@@ -31,54 +42,34 @@
   i18n.defaultLocale = "en_US.UTF-8";
 
   services.hypridle.enable = true;
-  programs = {
-    hyprland = {
-      enable = true;
-      xwayland.enable = true;
-      systemd.setPath.enable = true;
-
-      # See: https://wiki.hyprland.org/Useful-Utilities/Systemd-start/#uwsm
-      withUWSM = true;
-    };
-
-    # GPU-accelerated screen locking
-    hyprlock.enable = true;
-    # Auto suspend etc
-  };
-
-  services.displayManager.autoLogin = {
-    enable = true;
-    user = "jelle";
-  };
-
-  services.xserver = {
-    enable = true;
-    desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
-
-    xkb.layout = "us";
-    xkb.variant = "";
-  };
 
   services.printing.enable = true;
 
   security.rtkit.enable = true;
+
   services.pipewire = {
     enable = true;
-    alsa.enable = true;
-    alsa.support32Bit = true;
+
+    alsa = {
+      enable = true;
+      support32Bit = true;
+    };
+
     pulse.enable = true;
+    wireplumber.enable = true;
   };
 
   environment.systemPackages = with pkgs; [
     wget
     curl
     direnv
+    alsa-utils
   ];
 
   users.groups.i2c = { };
 
   users.users.jelle = {
+    shell = pkgs.fish;
     isNormalUser = true;
     description = "Jelle Verheyen";
     extraGroups = [
@@ -102,6 +93,11 @@
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
+
+  nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19"
+    "electron-36.9.5"
+  ];
 
   system.stateVersion = "24.05";
 }

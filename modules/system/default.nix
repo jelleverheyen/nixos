@@ -5,6 +5,7 @@
     ./minecraft.nix
     ./fish.nix
     ./ai.nix
+    ./hyprland.nix
   ];
 
   fonts = {
@@ -13,7 +14,7 @@
       nerd-fonts.iosevka-term
       liberation_ttf
       noto-fonts
-      noto-fonts-emoji
+      noto-fonts-color-emoji
       # CJK
       noto-fonts-cjk-sans
       wqy_microhei
@@ -51,5 +52,6 @@
 
   hardware.opentabletdriver.enable = true;
   nixpkgs.config.permittedInsecurePackages = [
+    "qtwebengine-5.15.19" # Stremio dependency
   ];
 }

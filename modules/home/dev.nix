@@ -9,6 +9,9 @@
     nixd # LSP
     nixfmt-rfc-style # Formatter
 
-    brave
+    vscode
+
+    dotnet-sdk_9
+
   ];
 }

@@ -2,7 +2,7 @@
 
 {
   home.packages = with pkgs; [
-    protonup
+    protonup-ng
     mangohud
     lutris
     vulkan-tools
@@ -14,6 +14,7 @@
 
     # runescape
     bolt-launcher
+    runelite
 
     # OOT
     shipwright

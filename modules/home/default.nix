@@ -26,14 +26,15 @@
     qsv
     neovim
     ddcutil
-    spotify
+    tidal-hifi
     stremio
     vlc
     xclip
     prismlauncher
     vesktop
     gnupg
-    pinentry
+    pinentry-gnome3
     zathura
+    numbat
   ];
 }

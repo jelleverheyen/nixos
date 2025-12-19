@@ -1,5 +1,12 @@
-{ ... }:
+{ pkgs, ... }:
 {
+  home.packages = with pkgs; [
+    onagre
+    grimblast
+  ];
+
+  services.dunst.enable = true;
+
   # Hint Electron apps to use Wayland
   home.sessionVariables.NIXOS_OZONE_WL = "1";
 
@@ -8,6 +15,7 @@
     bind =
       [
         "$mod, F, exec, firefox"
+        "$mod, R, exec, onagre"
         ", Print, exec, grimblast copy area"
       ]
       ++ (
