@@ -20,6 +20,9 @@
     shipwright
     _2ship2harkinian
 
+    cdemu-daemon
+    gcdemu
+
   ];
 
   home.sessionVariables = {
