@@ -102,10 +102,5 @@
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
-  nixpkgs.config.permittedInsecurePackages = [
-    "qtwebengine-5.15.19" # Stremio dependency
-    "electron-36.9.5"
-  ];
-
   system.stateVersion = "24.05";
 }
