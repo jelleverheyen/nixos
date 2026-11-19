@@ -6,6 +6,7 @@
     ./fish.nix
     ./ai.nix
     ./hyprland.nix
+    ./zen-browser.nix
   ];
 
   fonts = {

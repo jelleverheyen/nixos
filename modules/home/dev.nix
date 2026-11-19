@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ inputs, pkgs, ... }:
 
 {
   home.packages = with pkgs; [
@@ -9,9 +9,10 @@
     nixd # LSP
     nixfmt-rfc-style # Formatter
 
-    vscode
-
     dotnet-sdk_9
 
+    dbeaver-bin
+
+    claude-code
   ];
 }

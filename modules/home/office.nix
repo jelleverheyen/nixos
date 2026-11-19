@@ -4,5 +4,6 @@
     libreoffice
     calibre
     qalculate-gtk
+    qpdf
   ];
 }

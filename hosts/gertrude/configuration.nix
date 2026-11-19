@@ -1,4 +1,4 @@
-{ pkgs, ... }:
+{ pkgs, inputs, ... }:
 
 {
   nix.settings.experimental-features = [
@@ -26,14 +26,7 @@
   };
 
   nixpkgs.overlays = [
-    # Patch Scarlett Solo 4
-    #(import ../../overlays/alsa-ucm-conf.nix)
-
-    # Force Python 3.12 because Python 3.13 is feral
-    #(final: prev: {
-    #python3 = prev.python312;
-    #  python3Packages = prev.python312Packages;
-    #})
+    inputs.nix-claude-code.overlays.default
   ];
 
   boot = {
@@ -52,6 +45,11 @@
       "cpuid"
       "vhba"
     ];
+  };
+
+  programs.gnupg.agent = {
+    enable = true;
+    pinentryPackage = pkgs.pinentry-gnome3;
   };
 
   networking = {

@@ -27,7 +27,7 @@
     neovim
     ddcutil
     tidal-hifi
-    stremio
+    stremio-linux-shell
     vlc
     xclip
     prismlauncher

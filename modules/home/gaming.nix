@@ -6,7 +6,6 @@
     mangohud
     lutris
     vulkan-tools
-    heroic
     dxvk
 
     wineWowPackages.stable

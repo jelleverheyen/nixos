@@ -1,4 +1,4 @@
-{ pkgs, catppuccin, ... }:
+{ pkgs, ... }:
 {
   programs.zoxide = {
     enable = true;
@@ -6,7 +6,7 @@
   };
 
   programs.kitty.enable = true;
-  catppuccin.alacritty.enable = true;
+  # catppuccin.alacritty.enable = true;
   programs.alacritty = {
     enable = true;
 
