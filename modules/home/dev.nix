@@ -7,7 +7,7 @@
 
     # NixOS
     nixd # LSP
-    nixfmt-rfc-style # Formatter
+    nixfmt # Formatter
 
     dotnet-sdk_9
 

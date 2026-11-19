@@ -8,7 +8,7 @@
     vulkan-tools
     dxvk
 
-    wineWowPackages.stable
+    wineWow64Packages.stable
     winetricks
 
     # runescape

@@ -32,10 +32,11 @@
   # services.gnome.gnome-keyring.enable = true;
   # security.pam.services.greetd.enableGnomeKeyring = true;
 
+  services.desktopManager.gnome.enable = true;
+  services.displayManager.gdm.enable = true;
+
   services.xserver = {
     enable = true;
-    desktopManager.gnome.enable = true;
-    displayManager.gdm.enable = true;
 
     xkb.layout = "us";
     xkb.variant = "";
