@@ -88,6 +88,10 @@
     ];
   };
 
+  # Passkeys/FIDO2: grant the logged-in user access to security keys (hidraw)
+  services.udev.packages = [ pkgs.libfido2 ];
+  programs.yubikey-manager.enable = true;
+
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
