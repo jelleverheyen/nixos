@@ -9,6 +9,7 @@
     ./office.nix
     ./3d.nix
 
+    ./fish.nix
     ./terminal.nix
     ./tmux.nix
     ./hyprland.nix
