@@ -28,12 +28,10 @@
     ddcutil
     tidal-hifi
     stremio-linux-shell
-    vlc
     xclip
+    gnupg # ~/.gitconfig points gpg.program at the per-user profile
     prismlauncher
     vesktop
-    gnupg
-    pinentry-gnome3
     zathura
     numbat
   ];

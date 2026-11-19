@@ -13,14 +13,10 @@
 
     # runescape
     bolt-launcher
-    runelite
 
     # OOT
     shipwright
     _2ship2harkinian
-
-    cdemu-daemon
-    gcdemu
 
   ];
 

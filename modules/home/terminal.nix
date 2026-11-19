@@ -1,4 +1,7 @@
 { pkgs, ... }:
+let
+  family = "IosevkaTerm Nerd Font";
+in
 {
   programs.zoxide = {
     enable = true;
@@ -13,19 +16,19 @@
     settings = {
       font = {
         normal = {
-          family = "IosevkaTerm Nerd Font";
+          inherit family;
           style = "Regular";
         };
         bold = {
-          family = "IosevkaTerm Nerd Font";
+          inherit family;
           style = "Bold";
         };
         italic = {
-          family = "IosevkaTerm Nerd Font";
+          inherit family;
           style = "Italic";
         };
         bold_italic = {
-          family = "iosevkaterm nerd font";
+          inherit family;
           style = "Bold Italic";
         };
         size = 12;
