@@ -13,6 +13,7 @@
     ./terminal.nix
     ./tmux.nix
     ./hyprland.nix
+    ./gnome.nix
   ];
 
   home.packages = with pkgs; [
