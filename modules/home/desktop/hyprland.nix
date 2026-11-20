@@ -99,6 +99,14 @@ in
           "HYPRCURSOR_SIZE,24"
         ];
 
+        # Evoluent vertical mouse
+        device = {
+          name = "sonix-evoluent-verticalmouse-d";
+          accel_profile = "flat";
+          sensitivity = -0.32;
+          natural_scroll = false;
+        };
+
         general = {
           gaps_in = 5;
           gaps_out = 20;
@@ -145,11 +153,6 @@ in
             "windowsOut, 1, 1.49, linear, popin 87%"
             "fadeIn, 1, 1.73, almostLinear"
           ];
-        };
-
-        device = {
-          name = "epic-mouse-v1";
-          sensitivity = -0.5;
         };
 
         bind = [
