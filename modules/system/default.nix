@@ -5,7 +5,7 @@
     ./minecraft.nix
     ./fish.nix
     ./ai.nix
-    ./hyprland.nix
+    ./desktop
     ./zen-browser.nix
   ];
 

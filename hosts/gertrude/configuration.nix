@@ -47,9 +47,10 @@
   time.timeZone = "Europe/Brussels";
   i18n.defaultLocale = "en_US.UTF-8";
 
-  programs.cdemu.enable = true;
+  # Desktop environment: "gnome" or "hyprland"
+  desktop.environment = "gnome";
 
-  services.hypridle.enable = true;
+  programs.cdemu.enable = true;
 
   services.printing.enable = true;
 
@@ -95,10 +96,6 @@
   services.udev.extraRules = ''
     KERNEL=="i2c-[0-9]*", GROUP="i2c", MODE="0660"
   '';
-
-  # Workaround for GNOME autologin: https://github.com/NixOS/nixpkgs/issues/103746#issuecomment-945091229
-  systemd.services."getty@tty1".enable = false;
-  systemd.services."autovt@tty1".enable = false;
 
   # Install firefox.
   programs.firefox.enable = true;

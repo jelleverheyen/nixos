@@ -12,8 +12,7 @@
     ./fish.nix
     ./terminal.nix
     ./tmux.nix
-    ./hyprland.nix
-    ./gnome.nix
+    ./desktop
   ];
 
   home.packages = with pkgs; [
