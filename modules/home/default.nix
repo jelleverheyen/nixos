@@ -8,6 +8,7 @@
     ./av.nix
     ./office.nix
     ./3d.nix
+    ./brightness.nix
 
     ./fish.nix
     ./terminal.nix
