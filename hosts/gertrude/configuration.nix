@@ -41,6 +41,19 @@
     ];
   };
 
+  boot.supportedFilesystems = [ "ntfs" ];
+
+  fileSystems."/data" = {
+    device = "/dev/disk/by-uuid/2f156f5c-10da-48ea-b03d-061808c02f03";
+    fsType = "ext4";
+    # nofail: boot without it; x-gvfs-*: show in the file manager sidebar
+    options = [
+      "nofail"
+      "x-gvfs-show"
+      "x-gvfs-name=data"
+    ];
+  };
+
   programs.gnupg.agent = {
     enable = true;
     pinentryPackage = pkgs.pinentry-gnome3;
