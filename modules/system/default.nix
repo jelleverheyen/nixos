@@ -3,6 +3,7 @@
   imports = [
     ./gaming.nix
     ./minecraft.nix
+    ./factorio.nix
     ./fish.nix
     ./ai.nix
     ./desktop
