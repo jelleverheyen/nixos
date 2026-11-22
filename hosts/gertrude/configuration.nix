@@ -19,6 +19,13 @@
 
   nixpkgs.overlays = [
     inputs.nix-claude-code.overlays.default
+    # Exposes nixos-unstable packages as pkgs.unstable.<name>
+    (final: _: {
+      unstable = import inputs.nixpkgs-unstable {
+        inherit (final.stdenv.hostPlatform) system;
+        config.allowUnfree = true;
+      };
+    })
   ];
 
   boot = {
